@@ -44,8 +44,10 @@ function getQuestion() {
 
 function verifyAnswer() {
   if (this.value === questions[questionIndex].correctAnswer) {
+    // show correct flip to green background
   } else {
     countdown -= 10;
+    // show wrong flip to red background
   }
 
   questionIndex++;
@@ -99,18 +101,6 @@ function linkHighScores() {
   location.replace("./highscores.html");
   
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 startBtn.addEventListener('click', startQuiz);
 saveScore.addEventListener('click', saveHighScore);
