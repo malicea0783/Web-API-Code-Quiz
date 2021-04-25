@@ -6,6 +6,8 @@ let saveScore = document.getElementById('save-score');
 let instructions = document.getElementById('instructions');
 let questionContainer = document.getElementById('question-container');
 let form = document.getElementById('form');
+let highScoreDisplay = document.getElementById("highscore-display");
+let highScoresArr = JSON.parse(localStorage.getItem('highScoresArr')) || [];
 let questionIndex = 0;
 let countdown = 125;
 
@@ -77,33 +79,28 @@ function endGame() {
   alert("GAME OVER MAN! GAME OVER!!!");
   questionContainer.style.display = 'none';
   form.style.display = 'block';
-  // set their score
-  // show end screen
-  // clear out timer
 }
 
 function saveHighScore(event) {
   event.preventDefault();
   let initialInput = document.getElementById('initials').value;
-   let highScoreObj = {
-     name: initialInput,
-     score: countdown,
-   };
-   
-  if (localStorage.getItem('highScore') === null) {
-     localStorage.setItem('highScore', '[]');
-   }
-
-   let oldHighScores = JSON.parse(localStorage.getItem('highScore'));
-   oldHighScores.push(highScoreObj);
-
-  localStorage.setItem('highScore', JSON.stringify(oldHighScores));
+  let highScoreObj = {
+    name: initialInput,
+    score: countdown,
+  };
+  highScoresArr.push(highScoreObj);
+  highScoresArr.sort((a, b) => b.highScoreObj - a.highScoreObj);
+  localStorage.setItem('highScoresArr', JSON.stringify(highScoresArr));
   linkHighScores();
+  
 }
 
 function linkHighScores() {
   location.replace("./highscores.html");
+  
 }
+
+
 
 
 
