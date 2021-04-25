@@ -7,23 +7,39 @@
     <title>Javascript Quiz</title>
     <link rel="stylesheet" href="./assets/css/reset.css"/>
     <link rel="stylesheet" href="./assets/css/styles.css"/>
-
-
 </head>
-<body>
-    <div>
-        <h1>Coding Quiz Challenge</h1>
-        <a href="./highscores.html">Show High Scores</a>
-        <br><br>
 
-        <div id="question" class="question"></div>
-            <span id="question-title"></span>
-            <div id="choices" class="choices"></div>
-        
-        <br><br>
-    <button id="start">Start Quiz</button>
-    <span id="timer"> 125 </span>
+<body>
+    <header>
+        <a href="./highscores.html">Show High Scores</a>
+        <span> Timer: </span><span id="timer"> 125 </span>
+    </header>
+    
+    <div id="instructions" class="instructions">
+        <h1>Coding Quiz Challenge</h1>
+        <p>
+            Hey!! Test your noggin with this quiz!  Wrong answers will 
+            deduct 10 seconds from the clock.  Once time is up or you've run outta questions the quiz is over!  Make sure to log your initials and score!!!!
+        </p>
     </div>
+    
+    <button id="start">Start Quiz</button>
+        
+    <container id=question-container class="questions-container">
+        <span id="question-title"></span>
+            <div id="choices" class="choices"></div>
+            
+    </container>
+
+    <div id="form">
+        <form action="save-score-form" method="post">
+            <label for="initials">Initials:</label>
+            <input type="text" id="initials" name="user-initials">
+            <button type="submit" class="saveInitials" id="save-score">Save score</button>
+        </form>
+    </div>  
+
+    
     
     <script src="./assets/js/questions.js"></script>
     <script src="./assets/js/scripts.js"></script>
