@@ -13,6 +13,7 @@ let alertRight = document.getElementById('alert-right');
 let questionIndex = 0;
 let countdown = 125;
 
+
 function init() {
  instructions.style.display = 'block';
   questionContainer.style.display = 'none';
