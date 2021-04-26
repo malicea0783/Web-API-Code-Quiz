@@ -12,3 +12,10 @@ https://malicea0783.github.io/Web-API-Code-Quiz/
 **Clone my repo**
 https://github.com/malicea0783/Web-API-Code-Quiz.git
 
+![Code Quiz Instructions](./assets/images/codeQuizOpening.png)
+
+![Code Quiz Questions](./assets/images/codeQuizQuestions.png)
+
+![Code Quiz Enter Score](./assets/images/codeQuizEnterScore.png)
+
+![Code Quiz Highscores Page](./assets/images/CodeQuizHighscoresPage.png)
