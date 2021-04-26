@@ -7,7 +7,7 @@ This week I had to build a timed coding quiz with multiple-choice questions. Thi
 ### installation
 
 **Visit my page deployed via Github:**
-https://malicea0783.github.io/Web-API-Code-Quiz/index.HTML
+https://malicea0783.github.io/Web-API-Code-Quiz/
 
 **Clone my repo**
 https://github.com/malicea0783/Web-API-Code-Quiz.git
