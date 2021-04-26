@@ -8,6 +8,8 @@ let questionContainer = document.getElementById('question-container');
 let form = document.getElementById('form');
 let highScoreDisplay = document.getElementById("highscore-display");
 let highScoresArr = JSON.parse(localStorage.getItem('highScoresArr')) || [];
+let alertWrong = document.getElementById('alert-wrong');
+let alertRight = document.getElementById('alert-right');
 let questionIndex = 0;
 let countdown = 125;
 
@@ -44,16 +46,27 @@ function getQuestion() {
 
 function verifyAnswer() {
   if (this.value === questions[questionIndex].correctAnswer) {
-    // show correct flip to green background
+    showRight()
+    alertWrong.classList.add("alert-hide");
   } else {
+    showWrong()
+    alertRight.classList.add("alert-hide");
     countdown -= 10;
-    // show wrong flip to red background
   }
+
 
   questionIndex++;
   if (questionIndex < questions.length) {
     showQuestion();
   }
+}
+
+function showRight() {
+alertRight.classList.remove("alert-hide");
+}
+
+function showWrong() {
+  alertWrong.classList.remove("alert-hide");
 }
 
 function showQuestion() {
@@ -78,6 +91,7 @@ function startTimer() {
 
 // end game
 function endGame() {
+  document.getElementById("finalScore").innerHTML = countdown;
   alert("GAME OVER MAN! GAME OVER!!!");
   questionContainer.style.display = 'none';
   form.style.display = 'block';
@@ -85,6 +99,7 @@ function endGame() {
 
 function saveHighScore(event) {
   event.preventDefault();
+  
   let initialInput = document.getElementById('initials').value;
   let highScoreObj = {
     name: initialInput,

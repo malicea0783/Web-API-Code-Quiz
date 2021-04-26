@@ -1,0 +1,150 @@
+:root {
+	--gray: #475d63;
+	--drkgray: #2c2b2a;
+	--lavender: #e6e6Fa;
+    --green: #71eeb8;
+}
+
+html {
+	background-color: var(--gray);
+	font-family: 'Permanent Marker', cursive;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 5rem;
+	font-size: 1.25rem;
+}
+
+.instructions {
+    font-family: 'Roboto', sans-serif;
+	margin: 2rem 5rem;
+    color: var(--green);
+    margin-bottom: 15rem;
+}
+
+.instructions h1 {
+    font-size: 5rem;
+    margin-bottom: 15rem;
+}
+
+.timer {
+    font-family: 'Permanent Marker', cursive;
+    font-weight: bold;
+    color: var(--drkgray);
+    font-size: 2rem;
+}
+
+p {
+	font-weight: bold;
+    font-size: 2rem;
+	text-align: center;
+	padding: 0.1rem;
+    color: var(--green);
+
+}
+
+.start,
+.save-score {
+	font-size: 200%;
+    color: var(--green);
+	background-color: var(--drkgray);
+	display: flex;
+	margin: auto;
+	border-radius: 5px;
+	padding: 1rem;
+
+}
+.start:hover,
+.option:hover,
+.save-score:hover,
+.choice-btn:hover {
+	cursor: pointer;
+	opacity: 50%;
+
+}
+
+.form {
+	text-align: center;
+    margin-top: 15rem;
+
+}
+
+.question-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+    color: var(--green);
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+
+}
+.choices {
+    display: flex;
+    justify-content: space-around;
+	border-radius: 5px;
+	padding: 1rem;
+	margin: 1rem;
+
+}
+.finalscore {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 4rem;
+    color: var(--drkgray);
+}
+
+li {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 25rem;
+	margin: auto;
+	font-size: 1.5rem;
+    color: var(--green);
+
+}
+h1 {
+	text-align: center;
+    color: var(--green);
+
+}
+
+.initials {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--green);
+
+}
+
+.alert-hide {
+    display: none;
+}
+
+.option {
+    color: var(--green);
+    background-color: var(--drkgray);
+    border-radius: 5px;
+	padding: 1rem;
+}
+
+.input-bar {
+    margin-bottom: 15rem;
+    background-color: var(--drkgray);
+    border-radius: 5px;
+    color: var(--green);
+}
+
+a {
+    font-family: 'Permanent Marker', cursive;
+    color: var(--drkgray);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+a:hover {
+    color: var(--lavender);
+}

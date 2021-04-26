@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Quiz</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/reset.css"/>
     <link rel="stylesheet" href="./assets/css/styles.css"/>
 </head>
@@ -12,7 +16,7 @@
 <body>
     <header>
         <a href="./highscores.html">Show High Scores</a>
-        <span> Timer: </span><span id="timer"> 125 </span>
+        <div class="timer"> Timer: <span id="timer" class="timer"> 125 </span></div>
     </header>
     
     <div id="instructions" class="instructions">
@@ -22,21 +26,23 @@
         </p>
     </div>
     
-    <button id="start">Start Quiz</button>
+    <button id="start" class="start">Start Quiz</button>
         
     <container id=question-container class="questions-container">
-        <span id="question-title"></span>
+        <div id="question-title" class="question-title"></div>
             <div id="choices" class="choices"></div>
-            <p>WRONG</p>
-            <p>CORRECT></p>
+            <p id="alert-wrong" class="alert-hide">WRONG</p>
+            <p id="alert-right" class="alert-hide">CORRECT</p>
             
     </container>
 
-    <div id="form">
+    <div id="form" class="form">
+        <p>You're a friggin GENIUS and here's the proof!</p>
+        <p id="finalScore" class="finalscore">Your score is</p>
         <form action="save-score-form" method="post">
-            <label for="initials">Initials: </label>
-            <input type="text" id="initials" name="user-initials">
-            <button type="submit" class="saveInitials" id="save-score">Save score</button>
+            <label for="initials" class="initials">Initials: </label>
+            <input type="text" id="initials" class="input-bar" name="user-initials">
+            <button type="submit" class="save-score" id="save-score">Save score</button>
         </form>
     </div>  
 
