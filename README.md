@@ -12,8 +12,8 @@ https://malicea0783.github.io/Web-API-Code-Quiz/
 **Clone my repo**
 https://github.com/malicea0783/Web-API-Code-Quiz.git
 
-![Code Quiz Screenshots](./assets/images/screenshot1.png)# Web-API-Code-Quiz
+![Code Quiz Screenshots](/assets/images/screenshot1.png)# Web-API-Code-Quiz
 
-![Code Quiz Screenshots](./assets/images/screenshot2.png)# Web-API-Code-Quiz
+![Code Quiz Screenshots](/assets/images/screenshot2.png)# Web-API-Code-Quiz
 
-![Code Quiz Screenshots](./assets/images/screenshot3.png)# Web-API-Code-Quiz
+![Code Quiz Screenshots](/assets/images/screenshot3.png)# Web-API-Code-Quiz
