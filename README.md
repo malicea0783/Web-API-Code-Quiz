@@ -18,4 +18,4 @@ https://github.com/malicea0783/Web-API-Code-Quiz.git
 
 ![Code Quiz Enter Score](./assets/images/codeQuizEnterScore.png)
 
-![Code Quiz Highscores Page](./assets/images/CodeQuizHighscoresPage.png)
+![Code Quiz Highscores Page](./assets/images/codeQuizHighscoresPage.png)
