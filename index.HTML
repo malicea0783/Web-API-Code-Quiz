@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/reset.css"/>
-    <link rel="stylesheet" href="./assets/css/styles.css"/>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
 
 <body>
@@ -18,22 +19,23 @@
         <a href="./highscores.html">Show High Scores</a>
         <div class="timer"> Timer: <span id="timer" class="timer"> 125 </span></div>
     </header>
-    
+
     <div id="instructions" class="instructions">
         <h1>Coding Quiz Challenge</h1>
         <p>
-            Hey!! Test your noggin with this quiz!  Wrong answers will deduct 10 seconds from the clock.  Once time is up or you've run outta questions the quiz is over!  Make sure to log your initials and score!!!!
+            Hey!! Test your noggin with this quiz! Wrong answers will deduct 10 seconds from the clock. Once time is up
+            or you've run outta questions the quiz is over! Make sure to log your initials and score!!!!
         </p>
     </div>
-    
+
     <button id="start" class="start">Start Quiz</button>
-        
+
     <container id=question-container class="questions-container">
         <div id="question-title" class="question-title"></div>
-            <div id="choices" class="choices"></div>
-            <p id="alert-wrong" class="alert-hide">WRONG</p>
-            <p id="alert-right" class="alert-hide">CORRECT</p>
-            
+        <div id="choices" class="choices"></div>
+        <p id="alert-wrong" class="alert-hide">WRONG</p>
+        <p id="alert-right" class="alert-hide">CORRECT</p>
+
     </container>
 
     <div id="form" class="form">
@@ -44,11 +46,12 @@
             <input type="text" id="initials" class="input-bar" name="user-initials">
             <button type="submit" class="save-score" id="save-score">Save score</button>
         </form>
-    </div>  
+    </div>
 
-    
-    
+
+
     <script src="./assets/js/questions.js"></script>
     <script src="./assets/js/scripts.js"></script>
 </body>
+
 </html>
