@@ -6,22 +6,21 @@ let saveScore = document.getElementById('save-score');
 let instructions = document.getElementById('instructions');
 let questionContainer = document.getElementById('question-container');
 let form = document.getElementById('form');
-let highScoreDisplay = document.getElementById("highscore-display");
+let highScoreDisplay = document.getElementById('highscore-display');
 let highScoresArr = JSON.parse(localStorage.getItem('highScoresArr')) || [];
 let alertWrong = document.getElementById('alert-wrong');
 let alertRight = document.getElementById('alert-right');
-let questionIndex = 0;
+let questionsIndex = 0;
 let countdown = 125;
 
-
 function init() {
- instructions.style.display = 'block';
+  instructions.style.display = 'block';
   questionContainer.style.display = 'none';
   form.style.display = 'none';
 }
 
 function startQuiz() {
- instructions.style.display = 'none';
+  instructions.style.display = 'none';
   questionContainer.style.display = 'block';
   getQuestion();
   startTimer();
@@ -33,7 +32,7 @@ function startQuiz() {
 }
 
 function getQuestion() {
-  let currentQuestion = questions[questionIndex];
+  let currentQuestion = questions[questionsIndex];
   questionTitle.textContent = currentQuestion.question;
   currentQuestion.choices.forEach((choice) => {
     let choiceBtn = document.createElement('button');
@@ -46,35 +45,35 @@ function getQuestion() {
 }
 
 function verifyAnswer() {
-  if (this.value === questions[questionIndex].correctAnswer) {
-    showRight()
-    alertWrong.classList.add("alert-hide");
+  if (this.value === questions[questionsIndex].correctAnswer) {
+    showRight();
+    alertWrong.classList.add('alert-hide'); 
   } else {
-    showWrong()
-    alertRight.classList.add("alert-hide");
     countdown -= 10;
+    showWrong();
+    alertRight.classList.add('alert-hide');
   }
 
-
-  questionIndex++;
-  if (questionIndex < questions.length) {
+  questionsIndex++;
+  if (questionsIndex < questions.length) {
+    
     showQuestion();
   }
 }
 
 function showRight() {
-alertRight.classList.remove("alert-hide");
+  alertRight.classList.remove('alert-hide');
 }
 
 function showWrong() {
-  alertWrong.classList.remove("alert-hide");
+  alertWrong.classList.remove('alert-hide');
 }
 
 function showQuestion() {
-  questionTitle.textContent = questions[questionIndex].question;
+  questionTitle.textContent = questions[questionsIndex].question;
   var buttonMatrix = document.querySelectorAll('.option');
   buttonMatrix.forEach((element, i) => {
-    element.textContent = questions[questionIndex].choices[i];
+    element.textContent = questions[questionsIndex].choices[i];
   });
 }
 
@@ -83,7 +82,7 @@ function startTimer() {
     countdown--;
     document.getElementById('timer').textContent = countdown;
 
-    if (countdown <= 0 || questionIndex >= questions.length) {
+    if (countdown <= 0 || questionsIndex >= questions.length) {
       clearInterval(interval);
       endGame();
     }
@@ -92,15 +91,15 @@ function startTimer() {
 
 // end game
 function endGame() {
-  document.getElementById("finalScore").innerHTML = countdown;
-  alert("GAME OVER MAN! GAME OVER!!!");
+  document.getElementById('finalScore').innerHTML = countdown;
+  alert('GAME OVER MAN! GAME OVER!!!');
   questionContainer.style.display = 'none';
   form.style.display = 'block';
 }
 
 function saveHighScore(event) {
   event.preventDefault();
-  
+
   let initialInput = document.getElementById('initials').value;
   let highScoreObj = {
     name: initialInput,
@@ -110,15 +109,15 @@ function saveHighScore(event) {
   highScoresArr.sort((a, b) => b.highScoreObj - a.highScoreObj);
   localStorage.setItem('highScoresArr', JSON.stringify(highScoresArr));
   linkHighScores();
-  
+
 }
 
 function linkHighScores() {
-  location.replace("./highscores.html");
+  location.replace('./highscores.html');
   
 }
 
 startBtn.addEventListener('click', startQuiz);
 saveScore.addEventListener('click', saveHighScore);
 
-  init();
+init();
