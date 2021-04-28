@@ -1,7 +1,6 @@
 let questions = [
-
   {
-    question: 'what is scotts favorite color?',
+    question: 'what is scott\'s favorite color?',
     choices: ['blue', 'hotpink', 'red', 'green'],
     correctAnswer: 'hotpink',
   },
@@ -35,4 +34,19 @@ let questions = [
     choices: ['a mess', 'good luck', 'amore', 'trouble'],
     correctAnswer: 'amore',
   },
+  {
+    question: 'what is the only javascript operator that takes three operands?',
+    choices: ['string operators', 'ternary operators', 'comparison operators', 'void operator' ],
+    correctAnswer: 'ternary operators',
+  },
+  {
+    question: 'what was javascript originally called?',
+    choices: ['mocha', 'caramel', 'cacao', 'cocoa'],
+    correctAnswer: 'mocha',
+  },
+  {
+    question: '867?',
+    choices: ['5039', '5390', '5339', '5309'],
+    correctAnswer: '5309',
+  }
 ];

@@ -45,7 +45,7 @@ function getQuestion() {
 }
 
 function verifyAnswer() {
-  if (this.value === questions[questionsIndex].correctAnswer) {
+  if (this.textContent == questions[questionsIndex].correctAnswer) {
     showRight();
     alertWrong.classList.add('alert-hide'); 
   } else {
@@ -89,7 +89,6 @@ function startTimer() {
   }, 1000);
 }
 
-// end game
 function endGame() {
   document.getElementById('finalScore').innerHTML = countdown;
   alert('GAME OVER MAN! GAME OVER!!!');
